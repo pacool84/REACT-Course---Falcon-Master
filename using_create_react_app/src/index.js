@@ -4,7 +4,8 @@ import ReactDOM from "react-dom";
 const name = "Paco";
 const setColor = "green";
 const setColor2 = "red";
-const sesion = false;
+const sesion = true;
+const country = "Mexico";
 
 const codeJsx = (
   <>
@@ -13,6 +14,12 @@ const codeJsx = (
         <h1 className='encabezado' style={{ color: setColor }}>
           Hello my friend REACT, You initialize sesion with the id {name}
         </h1>
+        {country && (
+          <p>
+            Tu eres del país {country} La etiqueta p solo se renderizara en caso
+            de que no sea NULL o UNDEFINED la variable "country"
+          </p>
+        )}
       </div>
     ) : (
       <h1 style={{ color: setColor2 }}>No has iniciado sesion :(</h1>
